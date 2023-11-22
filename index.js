@@ -11,6 +11,11 @@ const PASSWORD = process.env.PASSWORD;
 
 app.use(express.json());
 
+// Test Application //
+app.get("/", (req, res) => {
+  res.send(`<h1>Welcome to the CRUD Application Database</h1>`);
+});
+
 // // { USERS DB CRUD Operation } // //
 // Get all users //
 app.get("/v1/api/users", async (req, res) => {
